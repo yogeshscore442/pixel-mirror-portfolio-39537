@@ -6,7 +6,7 @@ import { ArrowRight, Code, Palette, Zap } from "lucide-react";
 import { Link } from "react-router-dom";
 import ParticleField from "@/components/3d/ParticleField";
 import FloatingCube from "@/components/3d/FloatingCube";
-import yogeshLogo from "@/assets/yogesh-logo.png";
+
 
 const Home = () => {
   const [heroRef, heroInView] = useInView({ threshold: 0.1, triggerOnce: true });
@@ -71,21 +71,6 @@ const Home = () => {
             animate={heroInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.8 }}
           >
-            <motion.div
-              initial={{ opacity: 0, scale: 0.5 }}
-              animate={heroInView ? { opacity: 1, scale: 1 } : {}}
-              transition={{ duration: 1, delay: 0.3 }}
-              className="mb-8 flex justify-center"
-            >
-              <div className="relative group">
-                <div className="absolute inset-0 bg-gradient-to-r from-[hsl(190,95%,55%)] via-[hsl(var(--primary))] to-[hsl(330,85%,65%)] blur-3xl opacity-50 group-hover:opacity-80 transition-all duration-500 animate-pulse" />
-                <img
-                  src={yogeshLogo}
-                  alt="Yogesh Logo"
-                  className="relative w-32 h-32 md:w-48 md:h-48 object-contain transform group-hover:scale-110 group-hover:rotate-6 transition-all duration-500 ease-out animate-float filter drop-shadow-2xl"
-                />
-              </div>
-            </motion.div>
             <h1 className="text-6xl md:text-8xl font-bold mb-4">
               <span className="gradient-text">Yogesh M.S.</span>
             </h1>

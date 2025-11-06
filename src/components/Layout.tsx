@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
-import avatarLogo from "@/assets/avatar-logo.png";
+import yogeshLogo from "@/assets/yogesh-logo.png";
 
 interface LayoutProps {
   children: React.ReactNode;
@@ -47,11 +47,9 @@ const Layout = ({ children }: LayoutProps) => {
         <div className="container mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
             {/* Logo */}
-            <Link to="/" className="flex items-center gap-3">
-              <div className="w-12 h-12 rounded-full overflow-hidden glow-hover">
-                <img src={avatarLogo} alt="Logo" className="w-full h-full object-cover" />
-              </div>
-              <span className="text-xl font-bold gradient-text hidden sm:block">
+            <Link to="/" className="flex items-center gap-3 hover:scale-105 transition-transform">
+              <img src={yogeshLogo} alt="Yogesh Logo" className="w-10 h-10 object-contain" />
+              <span className="text-xl font-bold gradient-text">
                 Yogesh
               </span>
             </Link>

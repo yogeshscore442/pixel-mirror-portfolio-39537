@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 import ParticleField from "@/components/3d/ParticleField";
 import FloatingCube from "@/components/3d/FloatingCube";
 import HolographicRing from "@/components/3d/HolographicRing";
-import avatarLogo from "@/assets/avatar-logo.png";
+import avatarPhoto from "@/assets/avatar-photo.jpg";
 import { toast } from "sonner";
 
 const Login = () => {
@@ -68,7 +68,7 @@ const Login = () => {
             transition={{ delay: 0.2, type: "spring" }}
             className="w-32 h-32 mx-auto mb-8 rounded-full overflow-hidden animate-pulse-glow"
           >
-            <img src={avatarLogo} alt="Avatar" className="w-full h-full object-cover" />
+            <img src={avatarPhoto} alt="Yogesh" className="w-full h-full object-cover" />
           </motion.div>
 
           <motion.h1
@@ -86,7 +86,7 @@ const Login = () => {
             transition={{ delay: 0.4 }}
             className="text-muted-foreground mb-8"
           >
-            Enter your name to access the portfolio
+            Fill the answer to login
           </motion.p>
 
           <motion.form
