@@ -6,7 +6,7 @@ import { ArrowRight, Code, Palette, Zap } from "lucide-react";
 import { Link } from "react-router-dom";
 import ParticleField from "@/components/3d/ParticleField";
 import FloatingCube from "@/components/3d/FloatingCube";
-import heroBg from "@/assets/hero-bg.png";
+import yogeshLogo from "@/assets/yogesh-logo.png";
 
 const Home = () => {
   const [heroRef, heroInView] = useInView({ threshold: 0.1, triggerOnce: true });
@@ -34,10 +34,6 @@ const Home = () => {
     <div className="relative">
       {/* Hero Section */}
       <section ref={heroRef} className="relative min-h-screen flex items-center justify-center overflow-hidden">
-        {/* Background Image */}
-        <div className="absolute inset-0 opacity-30">
-          <img src={heroBg} alt="" className="w-full h-full object-cover" />
-        </div>
 
         {/* 3D Scene */}
         <div className="absolute inset-0 z-0">
@@ -81,27 +77,30 @@ const Home = () => {
               transition={{ duration: 1, delay: 0.3 }}
               className="mb-8 flex justify-center"
             >
-              <div className="relative">
-                <div className="absolute inset-0 bg-gradient-to-r from-[hsl(190,95%,55%)] via-[hsl(var(--primary))] to-[hsl(330,85%,65%)] rounded-full blur-3xl opacity-50 animate-pulse" />
+              <div className="relative group">
+                <div className="absolute inset-0 bg-gradient-to-r from-[hsl(190,95%,55%)] via-[hsl(var(--primary))] to-[hsl(330,85%,65%)] blur-3xl opacity-50 group-hover:opacity-80 transition-all duration-500 animate-pulse" />
                 <img
-                  src={heroBg}
-                  alt="3D Background"
-                  className="relative w-32 h-32 md:w-40 md:h-40 rounded-full object-cover border-4 border-[hsl(190,95%,55%)] shadow-2xl animate-float"
+                  src={yogeshLogo}
+                  alt="Yogesh Logo"
+                  className="relative w-32 h-32 md:w-48 md:h-48 object-contain transform group-hover:scale-110 group-hover:rotate-6 transition-all duration-500 ease-out animate-float filter drop-shadow-2xl"
                 />
               </div>
             </motion.div>
-            <h1 className="text-6xl md:text-8xl font-bold mb-6">
-              <span className="gradient-text">Creative Developer</span>
+            <h1 className="text-6xl md:text-8xl font-bold mb-4">
+              <span className="gradient-text">Yogesh M.S.</span>
             </h1>
-            <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-2xl mx-auto">
-              Crafting immersive digital experiences with cutting-edge 3D technology and modern web development
+            <p className="text-2xl md:text-3xl font-semibold text-accent mb-2">
+              Web Developer • Cybersecurity Enthusiast
+            </p>
+            <p className="text-lg md:text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
+              Building interactive websites and secure web apps.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link to="/projects" className="glass-button inline-flex items-center gap-2 text-lg bg-gradient-to-r from-[hsl(var(--primary))] to-[hsl(190,95%,55%)]">
+              <Link to="/projects" className="glass-button inline-flex items-center gap-2 text-lg bg-gradient-to-r from-[hsl(var(--primary))] to-[hsl(190,95%,55%)] hover:scale-105 hover:shadow-2xl hover:shadow-primary/50 transition-all duration-300">
                 View Projects
-                <ArrowRight className="w-5 h-5" />
+                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </Link>
-              <Link to="/freelancer" className="glass-button inline-flex items-center gap-2 text-lg bg-gradient-to-r from-[hsl(330,85%,65%)] to-[hsl(var(--accent))]">
+              <Link to="/freelancer" className="glass-button inline-flex items-center gap-2 text-lg bg-gradient-to-r from-[hsl(330,85%,65%)] to-[hsl(var(--accent))] hover:scale-105 hover:shadow-2xl hover:shadow-accent/50 transition-all duration-300">
                 Hire Me
               </Link>
             </div>
@@ -149,12 +148,12 @@ const Home = () => {
                 initial={{ opacity: 0, y: 30 }}
                 animate={featuresInView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.6, delay: index * 0.2 }}
-                className="glass-card text-center glow-hover"
+                className="glass-card text-center glow-hover group hover:scale-105 hover:-translate-y-2 transition-all duration-300"
               >
-                <div className="w-16 h-16 mx-auto mb-4 glass rounded-2xl flex items-center justify-center text-accent">
+                <div className="w-16 h-16 mx-auto mb-4 glass rounded-2xl flex items-center justify-center text-accent group-hover:rotate-12 group-hover:scale-110 transition-all duration-300">
                   {feature.icon}
                 </div>
-                <h3 className="text-2xl font-bold mb-3">{feature.title}</h3>
+                <h3 className="text-2xl font-bold mb-3 group-hover:text-accent transition-colors duration-300">{feature.title}</h3>
                 <p className="text-muted-foreground">{feature.description}</p>
               </motion.div>
             ))}
@@ -178,9 +177,9 @@ const Home = () => {
             <p className="text-xl text-muted-foreground mb-8">
               Let's collaborate and create something amazing together
             </p>
-            <Link to="/freelancer" className="glass-button inline-flex items-center gap-2 text-lg">
+            <Link to="/freelancer" className="glass-button inline-flex items-center gap-2 text-lg hover:scale-105 hover:shadow-2xl hover:shadow-primary/50 transition-all duration-300 group">
               Get in Touch
-              <ArrowRight className="w-5 h-5" />
+              <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </Link>
           </motion.div>
         </div>

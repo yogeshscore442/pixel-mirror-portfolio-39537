@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
-import { Award, BookOpen, Briefcase, GraduationCap } from "lucide-react";
+import { Award, BookOpen, Briefcase, GraduationCap, Mail, Phone, MessageCircle, Github, Download } from "lucide-react";
+import { Button } from "@/components/ui/button";
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls } from "@react-three/drei";
 import ParticleField from "@/components/3d/ParticleField";
@@ -14,27 +15,27 @@ const About = () => {
   const timeline = [
     {
       icon: <GraduationCap className="w-6 h-6" />,
-      year: "2018",
-      title: "Started Learning",
-      description: "Began my journey in web development and programming",
+      year: "2023",
+      title: "Web Development",
+      description: "Started my journey in web development and programming",
     },
     {
       icon: <BookOpen className="w-6 h-6" />,
-      year: "2019",
-      title: "Advanced Studies",
-      description: "Mastered modern frameworks and 3D web technologies",
+      year: "2024",
+      title: "Strengthened Cybersecurity skills",
+      description: "Focused on security practices and ethical hacking",
     },
     {
       icon: <Briefcase className="w-6 h-6" />,
-      year: "2020",
-      title: "Professional Work",
-      description: "Started working on client projects and freelance work",
+      year: "2025",
+      title: "Practicing OWASP ZAP & CTFs",
+      description: "Actively participating in Capture The Flag competitions",
     },
     {
       icon: <Award className="w-6 h-6" />,
-      year: "2023",
-      title: "Recognition",
-      description: "Delivered 50+ successful projects with satisfied clients",
+      year: "2026",
+      title: "Planning to start Freelancing",
+      description: "Ready to deliver professional projects to clients worldwide",
     },
   ];
 
@@ -124,7 +125,7 @@ const About = () => {
               >
                 <div className="flex items-center gap-8">
                   {/* Icon */}
-                  <div className="glass w-16 h-16 rounded-2xl flex items-center justify-center text-accent glow shrink-0">
+                  <div className="glass w-16 h-16 rounded-2xl flex items-center justify-center text-accent glow shrink-0 hover:scale-110 hover:rotate-12 transition-all duration-300">
                     {item.icon}
                   </div>
 
@@ -165,10 +166,10 @@ const About = () => {
                 initial={{ opacity: 0, x: -30 }}
                 animate={skillsInView ? { opacity: 1, x: 0 } : {}}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="glass-card"
+                className="glass-card group hover:scale-102 hover:-translate-x-2 transition-all duration-300"
               >
                 <div className="flex items-center justify-between mb-3">
-                  <span className="text-lg font-semibold">{skill.name}</span>
+                  <span className="text-lg font-semibold group-hover:text-accent transition-colors duration-300">{skill.name}</span>
                   <span className="text-accent font-bold">{skill.level}%</span>
                 </div>
                 <div className="h-3 glass rounded-full overflow-hidden">
@@ -176,11 +177,99 @@ const About = () => {
                     initial={{ width: 0 }}
                     animate={skillsInView ? { width: `${skill.level}%` } : {}}
                     transition={{ duration: 1, delay: index * 0.1 + 0.3 }}
-                    className="h-full bg-gradient-to-r from-primary to-accent rounded-full glow"
+                    className="h-full bg-gradient-to-r from-primary to-accent rounded-full glow group-hover:shadow-lg group-hover:shadow-accent/50 transition-shadow duration-300"
                   />
                 </div>
               </motion.div>
             ))}
+          </div>
+        </section>
+
+        {/* Contact Section */}
+        <section className="mt-32">
+          <motion.h2
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-4xl font-bold gradient-text text-center mb-16"
+          >
+            Get In Touch
+          </motion.h2>
+
+          <div className="max-w-4xl mx-auto">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="glass-card"
+            >
+              <div className="grid md:grid-cols-2 gap-6 mb-8">
+                <a
+                  href="mailto:yogeshms5314@gmail.com"
+                  className="flex items-center gap-4 p-4 glass rounded-xl hover:scale-105 hover:shadow-lg hover:shadow-primary/30 transition-all duration-300 group"
+                >
+                  <div className="w-12 h-12 rounded-full bg-gradient-to-r from-primary to-accent flex items-center justify-center group-hover:rotate-12 transition-transform duration-300">
+                    <Mail className="w-6 h-6 text-white" />
+                  </div>
+                  <div>
+                    <p className="text-sm text-muted-foreground">Email</p>
+                    <p className="font-semibold group-hover:text-accent transition-colors">yogeshms5314@gmail.com</p>
+                  </div>
+                </a>
+
+                <a
+                  href="tel:+919597972454"
+                  className="flex items-center gap-4 p-4 glass rounded-xl hover:scale-105 hover:shadow-lg hover:shadow-primary/30 transition-all duration-300 group"
+                >
+                  <div className="w-12 h-12 rounded-full bg-gradient-to-r from-accent to-primary flex items-center justify-center group-hover:rotate-12 transition-transform duration-300">
+                    <Phone className="w-6 h-6 text-white" />
+                  </div>
+                  <div>
+                    <p className="text-sm text-muted-foreground">Phone</p>
+                    <p className="font-semibold group-hover:text-accent transition-colors">+91 9597972454</p>
+                  </div>
+                </a>
+
+                <a
+                  href="https://wa.me/919597972454"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-4 p-4 glass rounded-xl hover:scale-105 hover:shadow-lg hover:shadow-primary/30 transition-all duration-300 group"
+                >
+                  <div className="w-12 h-12 rounded-full bg-gradient-to-r from-[hsl(190,95%,55%)] to-[hsl(var(--accent))] flex items-center justify-center group-hover:rotate-12 transition-transform duration-300">
+                    <MessageCircle className="w-6 h-6 text-white" />
+                  </div>
+                  <div>
+                    <p className="text-sm text-muted-foreground">WhatsApp</p>
+                    <p className="font-semibold group-hover:text-accent transition-colors">+91 9597972454</p>
+                  </div>
+                </a>
+
+                <a
+                  href="https://github.com/aiscore442"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-4 p-4 glass rounded-xl hover:scale-105 hover:shadow-lg hover:shadow-primary/30 transition-all duration-300 group"
+                >
+                  <div className="w-12 h-12 rounded-full bg-gradient-to-r from-[hsl(330,85%,65%)] to-primary flex items-center justify-center group-hover:rotate-12 transition-transform duration-300">
+                    <Github className="w-6 h-6 text-white" />
+                  </div>
+                  <div>
+                    <p className="text-sm text-muted-foreground">GitHub</p>
+                    <p className="font-semibold group-hover:text-accent transition-colors">aiscore442</p>
+                  </div>
+                </a>
+              </div>
+
+              <div className="text-center">
+                <a href="/Yogesh_CV.pdf" download>
+                  <Button className="glass-button inline-flex items-center gap-2 text-lg hover:scale-105 hover:shadow-2xl hover:shadow-primary/50 transition-all duration-300 group">
+                    <Download className="w-5 h-5 group-hover:translate-y-1 transition-transform" />
+                    Download Resume
+                  </Button>
+                </a>
+              </div>
+            </motion.div>
           </div>
         </section>
       </div>

@@ -101,7 +101,7 @@ const Login = () => {
                 type="text"
                 value={name}
                 onChange={(e) => setName(e.target.value)}
-                placeholder="Enter your name..."
+                placeholder="Say my name ....."
                 className="w-full px-6 py-4 glass rounded-xl text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary transition-all"
                 required
               />

@@ -52,7 +52,7 @@ const Layout = ({ children }: LayoutProps) => {
                 <img src={avatarLogo} alt="Logo" className="w-full h-full object-cover" />
               </div>
               <span className="text-xl font-bold gradient-text hidden sm:block">
-                Portfolio 3D
+                Yogesh
               </span>
             </Link>
 
@@ -62,7 +62,7 @@ const Layout = ({ children }: LayoutProps) => {
                 <Link
                   key={item.path}
                   to={item.path}
-                  className={`relative font-medium transition-all hover:text-accent ${
+                  className={`relative font-medium transition-all hover:text-accent hover:scale-110 ${
                     location.pathname === item.path
                       ? "text-accent"
                       : "text-foreground"
@@ -72,7 +72,7 @@ const Layout = ({ children }: LayoutProps) => {
                   {location.pathname === item.path && (
                     <motion.div
                       layoutId="underline"
-                      className="absolute left-0 right-0 h-0.5 bg-gradient-to-r from-primary to-accent bottom-[-4px]"
+                      className="absolute left-0 right-0 h-0.5 bg-gradient-to-r from-primary to-accent bottom-[-4px] glow"
                     />
                   )}
                 </Link>
