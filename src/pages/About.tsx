@@ -5,7 +5,7 @@ import { Canvas } from "@react-three/fiber";
 import { OrbitControls } from "@react-three/drei";
 import ParticleField from "@/components/3d/ParticleField";
 import HolographicRing from "@/components/3d/HolographicRing";
-import avatarLogo from "@/assets/avatar-logo.png";
+import yogeshPhoto from "@/assets/yogesh.jpg";
 
 const About = () => {
   const [timelineRef, timelineInView] = useInView({ threshold: 0.1, triggerOnce: true });
@@ -39,12 +39,14 @@ const About = () => {
   ];
 
   const skills = [
-    { name: "React & Next.js", level: 95 },
-    { name: "Three.js & WebGL", level: 90 },
-    { name: "TypeScript", level: 92 },
-    { name: "Node.js", level: 88 },
-    { name: "UI/UX Design", level: 85 },
-    { name: "3D Modeling", level: 82 },
+    { name: "Python", level: 92 },
+    { name: "JavaScript (React, Node.js)", level: 95 },
+    { name: "TypeScript", level: 90 },
+    { name: "Java", level: 85 },
+    { name: "Flask / Django", level: 88 },
+    { name: "Penetration Testing & CTF", level: 87 },
+    { name: "Three.js & GSAP", level: 90 },
+    { name: "Linux & VS Code", level: 92 },
   ];
 
   return (
@@ -84,8 +86,8 @@ const About = () => {
             <div className="relative group">
               <div className="absolute inset-0 bg-gradient-to-r from-[hsl(var(--primary))] via-[hsl(var(--accent))] to-[hsl(190,95%,55%)] rounded-full blur-2xl opacity-60 group-hover:opacity-80 transition-opacity duration-500 animate-pulse" />
               <img
-                src={avatarLogo}
-                alt="Profile"
+                src={yogeshPhoto}
+                alt="Yogesh M.S."
                 className="relative w-48 h-48 md:w-64 md:h-64 rounded-full object-cover border-4 border-[hsl(var(--accent))] shadow-2xl transform group-hover:scale-105 transition-transform duration-500"
               />
             </div>
@@ -94,8 +96,10 @@ const About = () => {
             About Me
           </h1>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            A passionate developer specializing in creating immersive 3D web experiences
-            and modern full-stack applications
+            Hi, I'm Yogesh - a passionate developer who loves turning creative ideas into interactive digital experiences. I specialize in building modern, responsive, and visually engaging web applications using cutting-edge technologies. My focus is on crafting clean designs, smooth animations, and meaningful user interactions that bring ideas to life.
+          </p>
+          <p className="text-lg text-muted-foreground max-w-3xl mx-auto mt-4">
+            I'm constantly exploring new tools, frameworks, and design trends to push my boundaries and create something unique every time. Whether it's a sleek 3D portfolio, a smart web app, or an innovative AI project I build with purpose, precision, and passion.
           </p>
         </motion.div>
 

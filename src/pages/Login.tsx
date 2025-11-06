@@ -19,12 +19,12 @@ const Login = () => {
     setIsLoading(true);
 
     setTimeout(() => {
-      if (name.toLowerCase().trim() === "jhon wick") {
+      if (name.toLowerCase().trim() === "yogesh") {
         sessionStorage.setItem("authenticated", "true");
-        toast.success("Welcome back, Jhon Wick!");
+        toast.success("Welcome back, Yogesh!");
         navigate("/");
       } else {
-        toast.error("Invalid credentials. Try 'Jhon Wick'");
+        toast.error("Invalid credentials. Try 'Yogesh'");
         setIsLoading(false);
       }
     }, 1000);
@@ -129,7 +129,7 @@ const Login = () => {
             transition={{ delay: 0.6 }}
             className="mt-6 text-sm text-muted-foreground"
           >
-            Hint: Try "Jhon Wick"
+            Hint: Try "Yogesh"
           </motion.p>
         </motion.div>
       </div>
