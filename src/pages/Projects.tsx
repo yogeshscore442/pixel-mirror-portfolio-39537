@@ -131,7 +131,7 @@ const Projects = () => {
             Want to see more projects?
           </p>
           <a
-            href="https://github.com"
+            href="https://github.com/yogeshscore442"
             target="_blank"
             rel="noopener noreferrer"
             className="glass-button inline-flex items-center gap-2"
