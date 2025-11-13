@@ -13,20 +13,20 @@ const Freelancer = () => {
     {
       icon: <Mail className="w-6 h-6" />,
       title: "Email",
-      value: "your.email@example.com",
-      link: "mailto:your.email@example.com",
+      value: "yogeshms5314@gmail.com",
+      link: "mailto:yogeshms5314@gmail.com",
     },
     {
       icon: <Phone className="w-6 h-6" />,
       title: "Phone",
-      value: "+1 234 567 8900",
-      link: "tel:+12345678900",
+      value: "+91 9597972454",
+      link: "tel:+919597972454",
     },
     {
       icon: <MessageSquare className="w-6 h-6" />,
       title: "WhatsApp",
-      value: "+1 234 567 8900",
-      link: "https://wa.me/12345678900",
+      value: "+91 9597972454",
+      link: "https://wa.me/919597972454",
     },
   ];
 
@@ -34,12 +34,12 @@ const Freelancer = () => {
     {
       icon: <Github className="w-6 h-6" />,
       title: "GitHub",
-      link: "https://github.com/yourusername",
+      link: "https://github.com/yogeshscore442",
     },
     {
       icon: <Linkedin className="w-6 h-6" />,
       title: "LinkedIn",
-      link: "https://linkedin.com/in/yourusername",
+      link: "https://www.linkedin.com/in/yogesh-m-s-544374294",
     },
   ];
 
@@ -73,7 +73,7 @@ const Freelancer = () => {
           className="text-center mb-20"
         >
           <h1 className="text-5xl md:text-7xl font-bold gradient-text mb-6">
-            Hire Me
+            Contact Me
           </h1>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
             Looking for a freelancer to bring your ideas to life? Let's collaborate
